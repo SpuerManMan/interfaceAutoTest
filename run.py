@@ -4,6 +4,7 @@ from log import *
 import unittest
 import readConfig as RC
 from TestReport import HTMLTestReportCN
+from TestReport import HTMLTestReport
 from config import configEmail
 
 class AllTest:
@@ -41,7 +42,7 @@ class AllTest:
             if suite is not None:
                 self.logger.info('------------ Test Start ------------')
                 fp=open(self.test_report_path,'wb')
-                runner=HTMLTestReportCN.HTMLTestRunner(stream=fp,title='普天自动化接口测试',description='Test Description',tester='Mr.Xiong')
+                runner=HTMLTestReport.HTMLTestRunner(stream=fp,title='普天自动化接口测试',description='Test Description',tester='Mr.Xiong')
                 runner.run(suite)
             else:
                 self.logger.info('没有要运行的testcase！')

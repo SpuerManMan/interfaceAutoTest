@@ -20,5 +20,5 @@ def get_xlsx(xlsx_name,sheet_Name):
     return xlsx
 
 
-#xls=get_xlsx('case.xlsx','Sheet1')
-#print(xls)
+xls=get_xlsx('case.xlsx','Sheet1')
+print(xls[0][0])
